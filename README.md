@@ -47,6 +47,18 @@ installed plugins automatically through `ncrystal-pluginmanager`. Plugin data fi
 only served on explicit request, hence the `plugins::` prefix (e.g. `ncrystal.load("plugins::jendl5-liquids/water_liquid_293.6K.ncmat")`).
 Use `ncrystal-config --browse` or `NCrystal.browseFiles()` to list the files.
 
+Refined-grid variants
+---------------------
+
+For the lowest temperature (200 K) of ethanol, benzene, toluene, mesitylene and m-xylene, a second file
+`<material>_liquid_200K_refined_grid.ncmat` is provided next to the original. At 200 K, S(alpha,beta) falls by orders of
+magnitude between beta=0 and the first beta grid point. ENDF-6 stores ln S (and NJOY interpolates ln S), but NCrystal
+interpolates S linearly in beta, which overestimates the quasi-elastic peak and raises the cross section below ~1e-3 eV
+(up to +44% for ethanol at 1e-5 eV). The refined files contain 2 additional beta points per bin in the first 3 beta bins,
+interpolated linearly in ln S (`refine_beta` in the converter). Against NJOY thermr the RMS deviation over 1e-5 eV to the
+grid limit drops from 0.8-12% to 0.3-0.4% (maximum deviation about 1% at 1e-5 eV). The original files are kept unchanged.
+Use `plugins::jendl5-liquids/ethanol_liquid_200K_refined_grid.ncmat` etc.
+
 Heavy water note: the D2O files are stored in ENDF-6 with LASYM=1 (S given for both signs
 of beta). The converter uses the negative-beta half mirrored to beta>=0, which is an
 approximation (the positive- and negative-beta halves differ only in the tails).

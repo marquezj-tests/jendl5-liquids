@@ -59,6 +59,17 @@ interpolated linearly in ln S (`refine_beta` in the converter). Against NJOY the
 grid limit drops from 0.8-12% to 0.3-0.4% (maximum deviation about 1% at 1e-5 eV). The original files are kept unchanged.
 Use `plugins::jendl5-liquids/ethanol_liquid_200K_refined_grid.ncmat` etc.
 
+Repository layout
+-----------------
+
+* `src/ncrystal_plugin_jendl5-liquids/` - the plugin (python package and `data/` with the NCMAT files). Only this
+  directory is packaged: the wheel and sdist are identical with and without the directories below.
+* `reference/` - NJOY2016 thermr inelastic cross sections (one CSV per NCMAT file, per-atom average over the molecule).
+* `scripts/compare_with_reference.py` - loads the installed plugin files with NCrystal and plots them against `reference/`
+  (`python scripts/compare_with_reference.py [--out DIR] [pattern ...]`).
+* `plots/` - NCrystal vs NJOY comparison plots (all temperatures per material; `*_refined.png` use the refined-grid files at 200 K;
+  `refined_grid/` shows original vs refined grid) and summary CSVs.
+
 Heavy water note: the D2O files are stored in ENDF-6 with LASYM=1 (S given for both signs
 of beta). The converter uses the negative-beta half mirrored to beta>=0, which is an
 approximation (the positive- and negative-beta halves differ only in the tails).

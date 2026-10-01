@@ -7,7 +7,7 @@ the JENDL-5 thermal scattering sublibrary (TSL) evaluated at Kyoto University
 (`KYOTO-U` in the ENDF-6 headers; author Y. Abe).
 
 Materials (liquid states only; one file per material and temperature, named
-`<material>_liquid_<T>K.ncmat`):
+`<material>_liquid_<T>K.ncmat`, referenced in NCrystal as `jendl5-liquids/<file>`):
 
 | Material | ENDF-6 files (JENDL-5 TSL) | Evaluation |
 |---|---|---|
@@ -39,7 +39,7 @@ Usage
 -----
 
     pip install ./jendl5-liquids
-    ncrystal-inspect ethanol_liquid_293.6K.ncmat
+    ncrystal-inspect jendl5-liquids/ethanol_liquid_293.6K.ncmat
 
 The plugin directory is `src/ncrystal_plugin_jendl5-liquids/data/`. NCrystal discovers
 installed plugins automatically through `ncrystal-pluginmanager`.

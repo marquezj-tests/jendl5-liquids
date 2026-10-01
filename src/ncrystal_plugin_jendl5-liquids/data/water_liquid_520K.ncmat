@@ -18,7 +18,7 @@ NCMAT v7
   element H
   fraction 2/3
   type scatknl
-  temperature 520
+  temperature 520  #NB: ENDF file specified "effective temperature" as 1278.189K
   alphagrid 5.64134e-06 5.77275e-06 5.90721e-06 6.04481e-06 6.18561e-06
      6.32969e-06 6.47713e-06 6.628e-06 6.78238e-06 6.94037e-06 7.10203e-06
      7.26746e-06 7.43675e-06 7.60996e-06 7.78723e-06 7.96862e-06 8.15423e-06
@@ -26940,7 +26940,7 @@ NCMAT v7
   element O
   fraction 1/3
   type scatknl
-  temperature 520
+  temperature 520  #NB: ENDF file specified "effective temperature" as 628.9422K
   alphagrid 8.95322e-05 9.16177e-05 9.37518e-05 9.59355e-05 9.81701e-05
      .000100457 .000102797 .000105191 .000107641 .000110149 .000112714 .00011534
      .000118027 .000120776 .000123589 .000126468 .000129414 .000132428 .000135512

@@ -18,7 +18,7 @@ NCMAT v7
   element C
   fraction 4/9
   type scatknl
-  temperature 200
+  temperature 200  #NB: ENDF file specified "effective temperature" as 601.8152K
   alphagrid .000174643 .000178711 .000182874 .000187134 .000191492 .000195953
      .000200517 .000205188 .000209967 .000214858 .000219863 .000224984 .000230225
      .000235587 .000241075 .00024669 .000252436 .000258316 .000264333 .00027049
@@ -25741,7 +25741,7 @@ NCMAT v7
   element H
   fraction 5/9
   type scatknl
-  temperature 200
+  temperature 200  #NB: ENDF file specified "effective temperature" as 1162.485K
   alphagrid 1.46675e-05 1.50091e-05 1.53588e-05 1.57165e-05 1.60826e-05
      1.64572e-05 1.68405e-05 1.72328e-05 1.76342e-05 1.8045e-05 1.84653e-05
      1.88954e-05 1.93355e-05 1.97859e-05 2.02468e-05 2.07184e-05 2.1201e-05

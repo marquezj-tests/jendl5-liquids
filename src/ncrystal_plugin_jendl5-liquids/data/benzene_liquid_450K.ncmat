@@ -18,7 +18,7 @@ NCMAT v7
   element C
   fraction 1/2
   type scatknl
-  temperature 450
+  temperature 450  #NB: ENDF file specified "effective temperature" as 728.187K
   alphagrid 7.76192e-05 7.94272e-05 8.12773e-05 8.31705e-05 8.51078e-05
      8.70902e-05 8.91188e-05 9.11947e-05 9.33188e-05 9.54925e-05 9.77168e-05
      9.9993e-05 .000102322 .000104705 .000107144 .00010964 .000112194 .000114807
@@ -28916,7 +28916,7 @@ NCMAT v7
   element H
   fraction 1/2
   type scatknl
-  temperature 450
+  temperature 450  #NB: ENDF file specified "effective temperature" as 1236.17K
   alphagrid 6.51889e-06 6.67073e-06 6.82611e-06 6.98511e-06 7.14781e-06
      7.31431e-06 7.48468e-06 7.65903e-06 7.83742e-06 8.01998e-06 8.20679e-06
      8.39795e-06 8.59357e-06 8.79373e-06 8.99856e-06 9.20817e-06 9.42266e-06

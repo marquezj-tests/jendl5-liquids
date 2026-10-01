@@ -46,3 +46,7 @@ The plugin directory is `src/ncrystal_plugin_jendl5-liquids/data/`. NCrystal dis
 installed plugins automatically through `ncrystal-pluginmanager`. Plugin data files are
 only served on explicit request, hence the `plugins::` prefix (e.g. `ncrystal.load("plugins::jendl5-liquids/water_liquid_293.6K.ncmat")`).
 Use `ncrystal-config --browse` or `NCrystal.browseFiles()` to list the files.
+
+Heavy water note: the D2O files are stored in ENDF-6 with LASYM=1 (S given for both signs
+of beta). The converter uses the negative-beta half mirrored to beta>=0, which is an
+approximation (the positive- and negative-beta halves differ only in the tails).

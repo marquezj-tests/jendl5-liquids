@@ -4,7 +4,7 @@ jendl5-liquids: NCrystal data plugin
 NCrystal data-only plugin (based on the `DummyDataPlugin` example in the NCrystal
 repository, `examples/plugin_dataonly`) providing NCMAT files for the liquids of
 the JENDL-5 thermal scattering sublibrary (TSL) evaluated at Kyoto University
-(`KYOTO-U` in the ENDF-6 headers; author Y. Abe).
+(`KYOTO-U` in the ENDF-6 headers; author Y. Abe) plus heavy water (JAEA, Y. Abe co-author).
 
 Materials (liquid states only; one file per material and temperature, named
 `<material>_liquid_<T>K.ncmat`, referenced in NCrystal as `plugins::jendl5-liquids/<file>`):
@@ -18,10 +18,11 @@ Materials (liquid states only; one file per material and temperature, named
 | m-xylene (C8H10) | H(m-C8H10)_0609, C(m-C8H10)_0639 | KYOTO-U, FEB21 |
 | methane (CH4) | H(CH4)_0033, C(CH4)_0633 | KYOTO-U, FEB21 |
 | triphenylmethane (C19H16) | H(C19H16)_0614, C(C19H16)_0644 | KYOTO-U, FEB21 |
+| heavy water (D2O) | D(D2O)_0011, O(D2O)_0051 | JAEA, SEP21 (A. Ichihara, Y. Abe (KU), K. Tada) |
 | light water (H2O) | H(H2O)_0001, O(H2O)_0661 | KYOTO-U, DEC23 |
 
-Not included: heavy water (JAEA evaluation, with Y. Abe (KU) as co-author), the solid
-phases of the organic materials, and everything from other laboratories.
+Heavy water is included although its evaluation is labelled JAEA, with Y. Abe (Kyoto
+University) as co-author. Not included: the solid phases of the organic materials, and everything from other laboratories.
 
 Notes and limitations
 ---------------------
